@@ -16,16 +16,19 @@ def calculoCapital(cantidad,interes,años):
         cantidades.append(cantidad)
     return cantidades
 
+if __name__=="__main__":
 #entrada
-cantidad = float(input("Indica la cantidad a invertir: "))
-interes = float(input("Ahora indica el interés anual: "))
-años = int(input("Introduce el número de años: "))
+    cantidad = float(input("Indica la cantidad a invertir: "))
+    interes = float(input("Ahora indica el interés anual: "))
+    años = int(input("Introduce el número de años: "))
 
 #proceso
-capital = calculoCapital(cantidad,interes,años)
+    capital = calculoCapital(cantidad,interes,años)
 
 #salida
-contador = 1
-for valores in capital:
-    print("En el año " + str(contador) + " el capital es: " + str(round(valores,2)))
-    contador +=1
+    contador = 1
+    for valores in capital:
+        print("En el año " + str(contador) + " el capital es: " + str(round(valores,2)))
+        contador +=1
+        
+        

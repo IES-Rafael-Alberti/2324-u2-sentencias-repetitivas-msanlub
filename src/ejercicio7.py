@@ -3,16 +3,19 @@
 
 def tablaMultiplicar():
     '''función que calcula la tabla multiplicar y da salida'''
+    listas = []
     for numeroUno in range(1, 11):
         for numeroDos in range(1, 11):
-            print(numeroUno*numeroDos,end="\t")  
-    return("")
-    
+            listas.append(f"{numeroUno} X {numeroDos} = {numeroUno*numeroDos}")  
+    return listas
 
+
+if __name__=="__main__":
 #entrada: no hay datos de entrada, sólo la tabla de multiplicar hasta el 10.
 
 #proceso
-multiplicación = tablaMultiplicar()
+    multiplicación = tablaMultiplicar()
 
 #salida
-print(multiplicación)
+    for n in multiplicación:
+        print(n)

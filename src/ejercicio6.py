@@ -19,5 +19,5 @@ if __name__=="__main__":
     triangulo = calculoTriangulo(numero)
 
 #salida
-for valor in triangulo:
-    print(valor)
+    for valor in triangulo:
+        print(valor)

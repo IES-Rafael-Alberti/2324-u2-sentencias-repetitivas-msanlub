@@ -3,19 +3,22 @@
 #introduzca la contraseña correcta.
 
 
-contraseña = 123456
+CONTRASEÑA = "123456"
 
-def contraseñaCorrecta(contraseña):
+def contraseñaCorrecta(passw,CONTRASEÑA):
     '''función que repite hasta tener la contraseña correcta'''
-    while passw != contraseña:
-        passw2 = input("Contraseña incorrecta, vuelve a intentarlo: ")
-    return "Contraseña correcta" 
-    
-#entrada
-passw = input("Introduce la contraseña correcta: ")
+    if passw != CONTRASEÑA:
+        return False
+    return True
 
+if __name__=="__main__":
+#entrada
+    passw = input("Introduce la contraseña correcta:\n")
+    
 #proceso
-key = contraseñaCorrecta(contraseña)
+    key = contraseñaCorrecta(passw,CONTRASEÑA)
 
 #salida
-print(key)
+    while not key:
+        passw = input("Error.La contraseña no es correcta.Intentalo de nuevo:\n")
+    print(key)

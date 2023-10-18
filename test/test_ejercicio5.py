@@ -4,8 +4,9 @@ import pytest
 @pytest.mark.parametrize(
     "cantidad, interes, años, expected",
     [
-    (2,3,2,"En el año 1 el capital es: 2.06","En el año 2 el capital es: 2.12"),
-       ]
+        (2,3,2,[2.06, 2.1218]),
+        (1500,3,4,[1545.0, 1591.3500000000001, 1639.0905000000002, 1688.2632150000004])
+    ]
 )
 
 def test_calculoCapital(cantidad,interes,años,expected):
