@@ -5,10 +5,10 @@
 def conteoFrase(frase:str,letra:str) -> int:
     '''función que da el número de veces que aparede la letra en la frase'''
     contador = 0
-    for letra in frase:
-        if letra == letra:
-            contador += 1
-
+    for l in frase:
+        if l == letra:
+            contador=+1
+    return contador
 
 if __name__=="__main__":
 #entrada
