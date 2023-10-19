@@ -4,9 +4,10 @@ import pytest
 @pytest.mark.parametrize(
     "numero, expected",
     [
-    (6,[1], [3,1],[5,3,1]),
-    
-        ]
+    (6,"1\n31\n531\n"),
+    (10,"1\n31\n531\n7531\n97531\n"),
+    (4,"1\n31\n")
+    ]
 )
 
 def test_calculoTriangulo(numero,expected):

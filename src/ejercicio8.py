@@ -13,11 +13,11 @@ def calculoTriangulo(numero:int):
     return triangulo
 
 if __name__=="__main__":
-#entrada
+    #entrada
     numero = int(input("Escribe un número entero: "))
 
-#proceso
+    #proceso
     mensajeTriangulo = calculoTriangulo(numero)
 
-#salida
+    #salida
     print(mensajeTriangulo)
