@@ -5,20 +5,23 @@
 
 CONTRASEÑA = "123456"
 
-def contraseñaCorrecta(passw,CONTRASEÑA):
+def checkPassword(passw,CONTRASEÑA):
     '''función que repite hasta tener la contraseña correcta'''
-    if passw != CONTRASEÑA:
+    '''if passw != CONTRASEÑA:
         return False
-    return True
+    return True'''
+    return passw == CONTRASEÑA
 
 if __name__=="__main__":
-#entrada
-    passw = input("Introduce la contraseña correcta:\n")
-    
-#proceso
-    key = contraseñaCorrecta(passw,CONTRASEÑA)
+    passwordOk = False
+    while not passwordOk: 
+        #entrada
+        passw = input("Introduce la contraseña correcta:\n")
 
-#salida
-    while not key:
-        passw = input("Error.La contraseña no es correcta.Intentalo de nuevo:\n")
-    print(key)
+        #proceso
+        passwordOk = checkPassword(passw,CONTRASEÑA)
+        if passwordOk is False:
+            print("Contraseña incorrecta.Intentalo de nuevo.")
+
+    #salida
+    print("Contraseña correcta.")
