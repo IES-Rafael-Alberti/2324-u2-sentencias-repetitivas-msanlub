@@ -8,7 +8,7 @@ def calculoTriangulo(numero:int):
         for j in range(i, 0, -2):
 #           print(j, end=" ")
             triangulo += str(j)
-#        print("")
+#       print("")
         triangulo += "\n"
     return triangulo
 
