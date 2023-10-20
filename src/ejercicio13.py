@@ -4,11 +4,8 @@ FIN = "salir"
 
 def ecoFrase(frase:str,FIN:str) -> str:
     '''función que repite la frase introducida hasta que se escriba salir'''
-    while True:
-        if frase == FIN:
-            break
-    return frase
-
+    while frase != FIN:
+        return frase
 
 if __name__=="__main__":
     #entrada
@@ -16,6 +13,6 @@ if __name__=="__main__":
 
     #procedimiento
     eco = ecoFrase(frase,FIN)
-    if eco is False:
+    if eco == FIN:
         #salida
         print("Se acabó.")
