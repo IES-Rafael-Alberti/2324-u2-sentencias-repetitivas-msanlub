@@ -2,17 +2,19 @@
 
 FIN = "salir"
 
-def ecoFrase(frase:str,FIN:str) -> str:
+def fraseSalida(frase:str,FIN:str) -> str:
     '''función que repite la frase introducida hasta que se escriba salir'''
-    while frase != FIN:
-        return frase
+    return frase == FIN
 
 if __name__=="__main__":
     #entrada
-    frase = str(input("Escribe lo que quieras: "))
+    frase = input("Escribe lo que quieras: ")
 
     #procedimiento
-    eco = ecoFrase(frase,FIN)
-    if eco == FIN:
+    while not fraseSalida(frase,FIN):
         #salida
-        print("Se acabó.")
+        print(frase)
+        #entrada
+        frase = input("Escribe lo que quieras: ")
+    
+    print("Se acabó.")

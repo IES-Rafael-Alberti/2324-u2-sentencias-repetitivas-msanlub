@@ -1,14 +1,14 @@
-from src.ejercicio13 import ecoFrase
+from src.ejercicio13 import fraseSalida
 import pytest
 
 @pytest.mark.parametrize(
-    "frase,expected",
+    "frase,FIN,expected",
     [
-    ("salir",False),
-    ("horas y horas programando",True),
-    ("future crypto",True)
+    ("salir","salir",True),
+    ("horas y horas programando","salir",False),
+    ("future crypto","salir",False)
     ]
 )
 
-def test_eco(frase,expected):
-    assert ecoFrase(frase) == expected
+def test_fraseSalida(frase,FIN,expected):
+    assert fraseSalida(frase,FIN) == expected

@@ -7,3 +7,22 @@ def suma(numero:int) -> int:
         numeros= numeros + numero%10
         numero = numero//10
     return numeros
+
+def calculoPar(total):
+    '''función que calcula la cantidad de números par'''
+    paridad = 0
+    while total == %2
+
+if __name__=="__main__":
+    #entrada
+    numero = int(input("Ingresa un número entero positivo: "))
+
+    #proceso
+    total = suma(numero)
+    par = calculoPar(total)
+    
+    #salida
+    if total >= 0:
+        print(total)
+    else:
+        print("El total de números pares es: " + str(par))
