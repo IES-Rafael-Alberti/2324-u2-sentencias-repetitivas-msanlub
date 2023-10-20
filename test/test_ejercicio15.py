@@ -1,4 +1,4 @@
-from src.ejercicio15 import suma
+from src.ejercicio15 import listaNumeros
 import pytest
 
 @pytest.mark.parametrize(
@@ -10,5 +10,5 @@ import pytest
     ]
 )
 
-def test_suma(numero,expected):
-    assert suma(numero) == expected
+def test_listaNumeros(numero,expected):
+    assert listaNumeros(numero) == expected
