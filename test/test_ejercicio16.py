@@ -4,9 +4,9 @@ import pytest
 @pytest.mark.parametrize(
     "numero,expected",
     [
-    (6,6),
-    (3,9),
-    (55,932)
+    ([6,4,1],6),
+    ([3,7,1],9),
+    ([932,930,55],932)
     ]
 )
 
