@@ -9,7 +9,6 @@ def suma(numero:int) -> int:
             break
     return n
 
-
 if __name__=="__main__":
     #entrada
     numero = int(input("Escribe un número: "))
