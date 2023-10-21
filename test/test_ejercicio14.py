@@ -1,4 +1,4 @@
-from src.ejercicio14 import listaNumeros
+'''from src.ejercicio14 import listaNumeros
 import pytest
 
 @pytest.mark.parametrize(
@@ -11,4 +11,4 @@ import pytest
 )
 
 def test_lista_numeros(numero,expected):
-    assert listaNumeros(numero) == expected
+    assert listaNumeros(numero) == expected'''

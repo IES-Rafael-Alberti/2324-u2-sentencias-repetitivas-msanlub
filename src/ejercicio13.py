@@ -16,5 +16,5 @@ if __name__=="__main__":
         print(frase)
         #entrada
         frase = input("Escribe lo que quieras: ")
-    
+
     print("Se acabó.")

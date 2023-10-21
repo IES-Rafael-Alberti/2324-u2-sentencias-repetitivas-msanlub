@@ -9,7 +9,7 @@ def guardarNumeros(numero:int,pares:list) ->list:
         if numero > 0:
             bolsa = bolsa + numero
             print(bolsa)
-            if numero%2:
+            if numero%2 == 0:
                 pares.append(numero)
             numero = int(input("Ingresa otro número entero positivo: "))
 

@@ -4,26 +4,26 @@ OP1 = "Este es el texto que se imprime con la opción 1"
 OP2 = "Este es el texto que se imprime con la opción 2"
 OP3 = "Programa finalizado"
 NONE = "Error,vuelva a indicar una opción correcta."
+MENU = "(1)Comenzar programa\n(2)Imprimir listado\n(3)Finalizar programa\n"
 
-def eligeMenu(opcion,OP1,OP2,OP3):
+def eligeMenu(opcion:str,OP1:str,OP2:str,OP3:str,NONE:str) ->str:
     '''función que muestra la opción que elige el usuario'''
-    while opcion:
-        if opcion == OP2:
-            return OP2
-        if opcion == OP1:
-            return OP1
-        if opcion == OP3:
-            return OP3
-        else:
-            return NONE
-
+    if opcion == "1":
+        return OP1
+    elif opcion == "2":
+        return OP2
+    elif opcion == "3":
+        return OP3
+    else:
+        return NONE
 
 if __name__=="__main__":
     #entrada
-    opcion = input("(1)Comenzar programa\n(2)Imprimir listado\n(3)Finalizar programa\nIndica la opción deseada: ")
-    
-    #proceso
-    eleccion = eligeMenu(opcion,OP1,OP2,OP3)
-    
-    #salida
-    print(eleccion)
+    opcion = 0
+
+    #procedimiento
+    while opcion != "3":
+        print(MENU)
+        opcion= input("Indica la opción deseada: ")
+        #salida
+        print(eligeMenu(opcion,OP1,OP2,OP3,NONE))
