@@ -6,7 +6,7 @@ OP3 = "Programa finalizado"
 NONE = "Error,vuelva a indicar una opción correcta."
 MENU = "(1)Comenzar programa\n(2)Imprimir listado\n(3)Finalizar programa\n"
 
-def eligeMenu(opcion:str,OP1:str,OP2:str,OP3:str,NONE:str) ->str:
+def eligeMenu(opcion:str) ->str:
     '''función que muestra la opción que elige el usuario'''
     if opcion == "1":
         return OP1
@@ -26,4 +26,4 @@ if __name__=="__main__":
         print(MENU)
         opcion= input("Indica la opción deseada: ")
         #salida
-        print(eligeMenu(opcion,OP1,OP2,OP3,NONE))
+        print(eligeMenu(opcion))

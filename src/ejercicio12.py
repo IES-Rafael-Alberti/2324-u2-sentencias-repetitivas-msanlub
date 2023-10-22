@@ -7,7 +7,7 @@ def conteoFrase(frase:str,letra:str) -> int:
     contador = 0
     for l in frase:
         if l == letra:
-            contador=+1
+            contador+=1
     return contador
 
 if __name__=="__main__":

@@ -3,26 +3,27 @@
 def calculoMonto(monto):
     '''función que suma la cantidad de monto'''
     cantidad = 0
-    while monto > 0:
+    if monto >= 0:
         cantidad = cantidad + monto
+        return cantidad
 
 def calculoDescuento(monto):
     '''función que calcula el descuento si lo hay'''
-    return ((monto*10) / 100)
-    
+    return (monto-((monto*10) / 100))
+
 if __name__=="__main__":
     #entrada
-    monto = int(input("Escriba el monto de su compra: "))
-    while monto < 0:
-        monto = int(input("Error, escribe un número positivo: "))
-    
+    monto = 1
+
     #proceso
-    totalMonto = calculoMonto(monto)
-    descuento = calculoDescuento(monto)
+    totalMonto = 0
+    while monto != 0:
+        monto = int(input("Escriba el monto de su compra: "))
+        if monto > 1000:
+            monto = calculoDescuento(monto)
+            totalMonto += monto
+        else:
+            monto = calculoMonto(monto)
+            totalMonto += monto
     #salida
-    if totalMonto == 0:
-        print("Fin.")
-    elif totalMonto > 1000:
-        print("La cantidad a pagar con descuento es: " + str(totalMonto - descuento))
-    else:
-        print("La cantidad a pagar es: " + str(totalMonto))
+    print("La cantidad a pagar es: " + str(totalMonto))
